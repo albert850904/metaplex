@@ -4,6 +4,7 @@
 FROM node:14.17.3-alpine as build
 
 RUN apk update
+RUN apk add --update alpine-sdk
 # RUN apk add libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg8-dev libgif-dev
 RUN apk add --no-cache \
         pixman-dev \
