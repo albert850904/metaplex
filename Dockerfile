@@ -12,6 +12,8 @@ WORKDIR /app
 # Add the source code to app
 COPY ./js /app
 
+RUN apt install libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg8-dev libgif-dev
+
 # Install all the dependencies
 RUN yarn install --frozen-lockfile
 RUN yarn bootstrap
